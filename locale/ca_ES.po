@@ -1,0 +1,118 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:account.payment.journal:"
+msgid "Dear Sir"
+msgstr "Benvolgut senyor"
+
+msgctxt "error:account.payment.journal:"
+msgid "Payment ref."
+msgstr "Ref. de pagament"
+
+msgctxt "error:account.payment.journal:"
+msgid "Total:"
+msgstr "Total:"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_add_date:"
+msgid "Add Date"
+msgstr "Afegeix data"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text1:"
+msgid "Line 1"
+msgstr "Línia 1"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text2:"
+msgid "Line 2"
+msgstr "Línia 2"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text3:"
+msgid "Line 3"
+msgstr "Línia 3"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_type:"
+msgid "Type of CSB 34 payment"
+msgstr "Tipus de pagament CSB 34"
+
+msgctxt "help:account.payment.journal,csb34_11_lc_add_date:"
+msgid ""
+"Check it if you want to add the 910 data type in the file to include the "
+"payment date."
+msgstr ""
+"Marqueu-lo si voleu afegir el tipus de dada 910 al fitxer per incloure la "
+"data de pagament."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text1:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduiu un text i/o seleccioneu un camp de la factura per inclure com a "
+"descripció de la carta. Valors admesos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text2:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduiu un text i/o seleccioneu un camp de la factura per inclure com a "
+"descripció de la carta. Valors admesos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text3:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduiu un text i/o seleccioneu un camp de la factura per inclure com a "
+"descripció de la carta. Valors admesos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Certified Payments"
+msgstr "Pagament certificat"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Checks"
+msgstr "Checs"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Promissory Notes"
+msgstr "Pagarés"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Transfers"
+msgstr "Trasferència"
+
+msgctxt "selection:account.payment.journal,process_method:"
+msgid "CSB 34-1 La Caixa"
+msgstr "CSB 34-1 La Caixa"
+
+msgctxt "view:account.payment.journal:"
+msgid "Additional data for CSB 34 type of payment file."
+msgstr "Dades addicionals pel fitxer de tipus de pagament CSB 34."
+
+msgctxt "view:account.payment.journal:"
+msgid "Additional data for promissory notes, checks, and certified payments."
+msgstr "Dades addicionals per pagarés, checs i pagaments certificats."
+
+msgctxt "view:account.payment.journal:"
+msgid "CSB 34-1 La Caixa Options"
+msgstr "Opcions CSB 34-1 La Caixa"
+
+msgctxt "view:account.payment.journal:"
+msgid ""
+"Optional Text for the Letter (adds 101, 102, 103, data tipes in the file)"
+msgstr ""
+"Text opcional per a la carta (afegeix els tipus de dada 101, 102 i 103 al "
+"fitxer)"

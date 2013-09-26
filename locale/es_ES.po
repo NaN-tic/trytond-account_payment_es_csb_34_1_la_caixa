@@ -1,0 +1,117 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:account.payment.journal:"
+msgid "Dear Sir"
+msgstr "Estimado señor"
+
+msgctxt "error:account.payment.journal:"
+msgid "Payment ref."
+msgstr "Ref. de pago"
+
+msgctxt "error:account.payment.journal:"
+msgid "Total:"
+msgstr "Total:"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_add_date:"
+msgid "Add Date"
+msgstr "Añade fecha"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text1:"
+msgid "Line 1"
+msgstr "Línea 1"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text2:"
+msgid "Line 2"
+msgstr "Línea 2"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_text3:"
+msgid "Line 3"
+msgstr "Línea 3"
+
+msgctxt "field:account.payment.journal,csb34_11_lc_type:"
+msgid "Type of CSB 34 payment"
+msgstr "Tipo de pago CSB 34"
+
+msgctxt "help:account.payment.journal,csb34_11_lc_add_date:"
+msgid ""
+"Check it if you want to add the 910 data type in the file to include the "
+"payment date."
+msgstr ""
+"Márquelo si quiere añadir el tipo de dato 910 en el fichero para incluir la "
+"fecha de pago."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text1:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduzca el texto y/o seleccione un campo de la factura a incluir como "
+"descripción en la carta. Valores admitidos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text2:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduzca el texto y/o seleccione un campo de la factura a incluir como "
+"descripción en la carta. Valores admitidos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "help:account.payment.journal,csb34_11_lc_text3:"
+msgid ""
+"Enter text and/or select a field of the invoice to include as a description "
+"in the letter. Allowed values are: ${name}, ${bank_account}, ${invoices}, "
+"${amount}, ${communication}, ${date}, ${maturity_date}, ${create_date}, "
+"${date_created}, ${concept}."
+msgstr ""
+"Introduzca el texto y/o seleccione un campo de la factura a incluir como "
+"descripción en la carta. Valores admitidos: ${name}, ${bank_account}, "
+"${invoices}, ${amount}, ${communication}, ${date}, ${maturity_date}, "
+"${create_date}, ${date_created}, ${concept}."
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Certified Payments"
+msgstr "Pagos certificados"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Checks"
+msgstr "Cheques"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Promissory Notes"
+msgstr "Pagarés"
+
+msgctxt "selection:account.payment.journal,csb34_11_lc_type:"
+msgid "Transfers"
+msgstr "Transferencia"
+
+msgctxt "selection:account.payment.journal,process_method:"
+msgid "CSB 34-1 La Caixa"
+msgstr "CSB 34-1 La Caixa"
+
+msgctxt "view:account.payment.journal:"
+msgid "Additional data for CSB 34 type of payment file."
+msgstr "Fecha adicional para el fichero de tipo de pago CSB 34"
+
+msgctxt "view:account.payment.journal:"
+msgid "Additional data for promissory notes, checks, and certified payments."
+msgstr "Datos adicionales para pagarés, cheques y pagos certificados."
+
+msgctxt "view:account.payment.journal:"
+msgid "CSB 34-1 La Caixa Options"
+msgstr "Opciones CSB 34-1 La Caixa"
+
+msgctxt "view:account.payment.journal:"
+msgid ""
+"Optional Text for the Letter (adds 101, 102, 103, data tipes in the file)"
+msgstr ""
+"Texto opcional para cartas (añade tipos de dato 101, 102 y 103 al fichero)"
