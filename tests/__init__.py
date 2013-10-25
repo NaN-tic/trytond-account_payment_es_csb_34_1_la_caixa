@@ -3,3 +3,5 @@
 # the full copyright notices and license terms.
 
 from .test_account_payment_es_csb_34_1_la_caixa import suite
+
+__all__ = ['suite']
