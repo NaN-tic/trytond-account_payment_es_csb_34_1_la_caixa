@@ -49,7 +49,8 @@ class Journal:
     @classmethod
     def __setup__(cls):
         super(Journal, cls).__setup__()
-        if ('csb34_1_lc', 'CSB 34-1 La Caixa') not in cls.process_method.selection:
+        if (('csb34_1_lc', 'CSB 34-1 La Caixa')
+                not in cls.process_method.selection):
             cls.process_method.selection.extend([
                     ('csb34_1_lc', 'CSB 34-1 La Caixa'),
                     ])
@@ -102,11 +103,11 @@ class Group:
         @return: Computed message (string)
         """
         for field in receipt.iterkeys():
-            value = str(receipt[field]).decode('utf-8')
+            value = unicode(receipt[field])
             message = message.replace('${' + field + '}', value)
         return message
 
-    def set_devault_csb34_1_lc_payment_values(self):
+    def set_default_csb34_1_lc_payment_values(self):
         values = self.set_default_csb34_payment_values()
         values['add_date'] = values['payment_journal'].csb34_11_lc_add_date
         values['csb34_11_lc_type'] = values['payment_journal'].csb34_11_lc_type
@@ -225,7 +226,7 @@ class Group:
             record.suffix = values['suffix']
             record.recipient_nif = receipt['vat_number']
             record.data_number = '012'
-            record.street = receipt['street']
+            record.street = receipt['street'][:28]
             return write([record])
 
         def set_detail_004_record():
@@ -281,7 +282,7 @@ class Group:
             record.suffix = values['suffix']
             record.recipient_nif = receipt['vat_number']
             record.data_number = '101'
-            record.message = receipt['message_101']
+            record.message = receipt['message_101'][:36]
             return write([record])
 
         def set_detail_102_record():
@@ -292,7 +293,7 @@ class Group:
             record.suffix = values['suffix']
             record.recipient_nif = receipt['vat_number']
             record.data_number = '102'
-            record.message = receipt['message_102']
+            record.message = receipt['message_102'][:36]
             return write([record])
 
         def set_detail_103_record():
@@ -339,62 +340,62 @@ class Group:
             record.record_count = str(values['record_count'])
             return write([record])
 
-        values = Group.set_devault_csb34_1_lc_payment_values(group)
-        text = set_ordering_header_record() + '\r\n'
+        values = Group.set_default_csb34_1_lc_payment_values(group)
+        text = set_ordering_header_record()
         values['record_count'] += 1
-        text += set_ordering_header_002_record() + '\r\n'
+        text += set_ordering_header_002_record()
         values['record_count'] += 1
-        text += set_ordering_header_003_record() + '\r\n'
+        text += set_ordering_header_003_record()
         values['record_count'] += 1
-        text += set_ordering_header_004_record() + '\r\n'
+        text += set_ordering_header_004_record()
         values['record_count'] += 1
-        text += set_national_header_record() + '\r\n'
+        text += set_national_header_record()
         values['record_count'] += 1
         values['detail_record_count'] += 1
         for receipt in values['receipts']:
-            text += set_detail_001_record() + '\r\n'
+            text += set_detail_001_record()
             values['record_count'] += 1
             values['detail_record_count'] += 1
-            text += set_detail_002_record() + '\r\n'
+            text += set_detail_002_record()
             values['record_count'] += 1
             values['detail_record_count'] += 1
             if receipt['street']:
-                text += set_detail_003_record() + '\r\n'
+                text += set_detail_003_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
             if 'street2' in receipt and receipt['street2']:
-                text += set_detail_004_record() + '\r\n'
+                text += set_detail_004_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
             if receipt['zip'] or receipt['city']:
-                text += set_detail_005_record() + '\r\n'
+                text += set_detail_005_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
             if values['csb34_11_lc_type'] != 'transfer' \
                     and values['send_type'] in ('mail', 'certified_mail'):
-                text += set_detail_006_record() + '\r\n'
+                text += set_detail_006_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
                 if values['payroll_check']:
-                    text += set_detail_007_record() + '\r\n'
+                    text += set_detail_007_record()
                     values['record_count'] += 1
                     values['detail_record_count'] += 1
-                text += set_detail_101_record() + '\r\n'
+                text += set_detail_101_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
-                text += set_detail_102_record() + '\r\n'
+                text += set_detail_102_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
-                text += set_detail_103_record() + '\r\n'
+                text += set_detail_103_record()
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
                 if values['add_date']:
-                    text += set_detail_910_record() + '\r\n'
+                    text += set_detail_910_record()
                     values['record_count'] += 1
                     values['detail_record_count'] += 1
             values['payment_count'] += 1
         values['detail_record_count'] += 1
-        text += set_national_footer_record() + '\r\n'
+        text += set_national_footer_record()
         values['record_count'] += 2
-        text += set_ordering_footer_record() + '\r\n'
+        text += set_ordering_footer_record()
         group.attach_file(text)
