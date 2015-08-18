@@ -3,6 +3,7 @@
 # the full copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
+from trytond.pyson import Eval
 import logging
 
 try:
@@ -92,6 +93,26 @@ class Journal:
     @staticmethod
     def default_csb34_11_lc_add_date():
         return True
+
+    @classmethod
+    def view_attributes(cls):
+        attributes = super(Journal, cls).view_attributes()
+        attributes.append(
+            ('/form/group[@id="csb_34_1_lc"]', 'states', {
+                    'invisible': Eval('process_method') != 'csb34_1_lc',
+                    })
+                )
+        attributes.append(
+            ('/form/group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]', 'states', {
+                    'invisible': Eval('csb34_11_lc_type') == 'transfer',
+                    })
+                )
+        attributes.append(
+            ('/form/group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]/group[@id="csb_34_other"]', 'states', {
+                    'invisible': Eval('send_type') == 'other',
+                    })
+                )
+        return attributes
 
 
 class Group:

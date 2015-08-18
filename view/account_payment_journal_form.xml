@@ -5,7 +5,7 @@ copyright notices and license terms. -->
 <data>
     <xpath expr="/form/field[@name=&quot;ine_code&quot;]"
             position="after">
-        <group col="6" colspan="4" id="csb_34_1_lc" states="{'invisible': Eval('process_method') != 'csb34_1_lc'}">
+        <group col="6" colspan="4" id="csb_34_1_lc">
             <separator string="CSB 34-1 La Caixa Options" colspan="6" id="csb_34"/>
             <label name="csb34_11_lc_type"/>
             <field name="csb34_11_lc_type" colspan="5"/>
@@ -16,7 +16,7 @@ copyright notices and license terms. -->
             <field name="csb_34_concept"/>
             <label name="csb_34_direct_pay_order"/>
             <field name="csb_34_direct_pay_order"/>
-            <group col="6" colspan="6" id="csb_34_type" states="{'invisible': Eval('csb34_11_lc_type') == 'transfer'}">
+            <group col="6" colspan="6" id="csb_34_type">
                 <separator string="Additional data for promissory notes, checks, and certified payments." colspan="6" id="promissory_notes"/>
                 <label name="csb_34_send_type"/>
                 <field name="csb_34_send_type"/>
@@ -24,7 +24,7 @@ copyright notices and license terms. -->
                 <field name="csb34_not_to_the_order"/>
                 <label name="csb34_barred"/>
                 <field name="csb34_barred"/>
-                <group col="4" colspan="6" id="csb_34_type" states="{'invisible': Eval('send_type') == 'other'}">
+                <group col="4" colspan="6" id="csb_34_other">
                     <separator string="Optional Text for the Letter (adds 101, 102, 103, data tipes in the file)" colspan="6" id="text_lines"/>
                     <label name="csb34_11_lc_text1"/>
                     <field name="csb34_11_lc_text1" colspan="5"/>
