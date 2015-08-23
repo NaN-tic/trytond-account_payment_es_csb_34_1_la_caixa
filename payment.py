@@ -96,23 +96,16 @@ class Journal:
 
     @classmethod
     def view_attributes(cls):
-        attributes = super(Journal, cls).view_attributes()
-        attributes.append(
-            ('/form/group[@id="csb_34_1_lc"]', 'states', {
+        return super(Journal, cls).view_attributes() + [
+            ('//group[@id="csb_34_1_lc"]', 'states', {
                     'invisible': Eval('process_method') != 'csb34_1_lc',
-                    })
-                )
-        attributes.append(
-            ('/form/group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]', 'states', {
+                    }),
+            ('//group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]', 'states', {
                     'invisible': Eval('csb34_11_lc_type') == 'transfer',
-                    })
-                )
-        attributes.append(
-            ('/form/group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]/group[@id="csb_34_other"]', 'states', {
+                    }),
+            ('//group[@id="csb_34_1_lc"]/group[@id="csb_34_type"]/group[@id="csb_34_other"]', 'states', {
                     'invisible': Eval('send_type') == 'other',
-                    })
-                )
-        return attributes
+                    })]
 
 
 class Group:
