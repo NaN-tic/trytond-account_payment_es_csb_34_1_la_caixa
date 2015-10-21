@@ -274,6 +274,17 @@ class Group:
             record.concept = receipt['concept']
             return write([record])
 
+        def set_detail_009_record():
+            record = Record(c34_1_lc.DETAIL_009_RECORD)
+            record.record_code = '06'
+            record.operation_code = values['csb34_11_lc_type']
+            record.nif = values['vat_number']
+            record.suffix = values['suffix']
+            record.recipient_nif = receipt['vat_number']
+            record.data_number = '018'
+            record.beneficiary_nif = receipt['vat_number']
+            return write([record])
+
         def set_detail_101_record():
             record = Record(c34_1_lc.DETAIL_101_RECORD)
             record.record_code = '06'
@@ -377,7 +388,7 @@ class Group:
                 values['record_count'] += 1
                 values['detail_record_count'] += 1
                 if values['payroll_check']:
-                    text += set_detail_007_record()
+                    text += set_detail_009_record()
                     values['record_count'] += 1
                     values['detail_record_count'] += 1
                 text += set_detail_101_record()
