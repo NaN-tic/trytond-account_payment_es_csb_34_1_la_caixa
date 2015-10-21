@@ -151,7 +151,7 @@ class Group:
             receipt['message_103'] = self.map_message(receipt,
                     values['payment_journal'].csb34_11_lc_text3)
             if values['add_date']:
-                (year, month, day) = str(values['payment_date']).split('-')
+                (year, month, day) = str(receipt['maturity_date']).split('-')
                 receipt['date'] = day + month + year
         return values
 
