@@ -1,11 +1,10 @@
-# This file is part of account_payment_es_csb_34_1_la_caixa module for Tryton.
-# The COPYRIGHT file at the top level of this repository contains
-# the full copyright notices and license terms.
-import unittest
-import doctest
-import trytond.tests.test_tryton
+#!/usr/bin/env python
+# This file is part of the account_payment_es_csb_34_1_la_caixa module for Tryton.
+# The COPYRIGHT file at the top level of this repository contains the full
+# copyright notices and license terms.
 from trytond.tests.test_tryton import test_view, test_depends
-from trytond.tests.test_tryton import doctest_setup, doctest_teardown
+import trytond.tests.test_tryton
+import unittest
 
 
 class AccountPaymentEsCSB341LaCaixaTestCase(unittest.TestCase):
@@ -16,11 +15,11 @@ class AccountPaymentEsCSB341LaCaixaTestCase(unittest.TestCase):
             'account_payment_es_csb_34_1_la_caixa')
 
     def test0005views(self):
-        '''Test views'''
+        'Test views'
         test_view('account_payment_es_csb_34_1_la_caixa')
 
     def test0006depends(self):
-        '''Test depends'''
+        'Test depends'
         test_depends()
 
 
